@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
 const File = new mongoose.Schema({
   path: {
@@ -7,18 +7,14 @@ const File = new mongoose.Schema({
   },
   originalName: {
     type: String,
-    required: true
+    required: true,
   },
-  password: {
-    type: String,
-    required: false,
-  },
+  password: String,
   downloadCount: {
     type: Number,
     required: true,
-    default: 0
-  }
-
+    default: 0,
+  },
 })
 
 module.exports = mongoose.model("File", File)
